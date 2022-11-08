@@ -33,7 +33,7 @@ girarBtn.addEventListener("click", () => {
     let lado=parseInt(opc.value)
     let ingreso=parseInt(apuesta.value)
     sumaapuesta+=ingreso;
-    if( ingreso>suma ){
+   
         if(i){
             moneda.style.animation = "spin-cara 2s forwards";
                setTimeout(function(){
@@ -42,7 +42,7 @@ girarBtn.addEventListener("click", () => {
                    suma=ingreso*2;
                    swal(` Que buena suerte!!, ganaste más dinero y en total es: ${suma}`); } 
                else{
-                   suma=ingreso-1000;
+                   suma=ingreso-ingreso;
                    swal(`¡Oh noo!, perdiste dinero en total tienes: ${suma}`); }
                    }, 3000);
                    cara++;
@@ -54,8 +54,8 @@ girarBtn.addEventListener("click", () => {
                    suma=ingreso*2;
                    swal(`Que buena suerte!!, ganaste más dinero y en total es: ${suma}`); } 
                else{
-                   suma=ingreso-1000;
-                   swal(`¡Oh noo!, perdiste dinero en total tienes: ${suma}`);}
+                   suma=ingreso-ingreso;
+                   swal(`¡Oh noo!, perdiste todo tu dinero en total tienes: ${suma}`);}
            }, 3000);
            sello++;
         }
@@ -63,11 +63,8 @@ girarBtn.addEventListener("click", () => {
         setTimeout(updateStats, 3000);
         disableButton();
       
-}
-else{
-    suma==0
-    swal('Upss!, Perdiste todo tu dinero...ingresa una nueva apuesta')  
-}
+
+
  
 }
     else{
